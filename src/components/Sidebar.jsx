@@ -38,6 +38,12 @@ export default function Sidebar({ tab, setTab, now }) {
         <div className="sidebar-date">
           {DOW[now.getDay()]}, {MONTHS[now.getMonth()]} {now.getDate()}
         </div>
+        <div style={{ marginTop: '12px', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '11.5px', color: 'var(--text-dim)' }}>
+          <span>built by <a href="https://niranjans.tech/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brass)', textDecoration: 'none', fontWeight: 600 }}>Niranjan</a></span>
+          <a href="https://github.com/NiranjanS8/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-dim)', display: 'inline-flex', transition: 'color 0.15s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--brass)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--text-dim)'}>
+            <Icon name="github" size={13} />
+          </a>
+        </div>
       </div>
     </div>
   );
